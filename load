@@ -8,7 +8,7 @@ local b = function(a)
 end
 if g == 16732694052 then
     a("Loading Fisch Script!")
-    b("https://WarnHub.github.io/fisch")
+    b("https://warnhub.github.io/fisch")
 else
     a("This Game isn't Supported!")   
 end
