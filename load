@@ -18,7 +18,7 @@ else
    local g = game.PlaceId
    if g == 16732694052 then
        a("Loading Fisch Script!")
-       b("https://warnhub.github.io/fisch")
+       b("https://raw.githubusercontent.com/WarnHub/warnhub.github.io/refs/heads/main/fisch")
    else
        a("This Game isn't Supported!")   
    end
