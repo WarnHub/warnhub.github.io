@@ -5,21 +5,10 @@ end
 local b = function(a)
     loadstring(game:HttpGet(a))()
 end
-local c = function(a)
-    return (a:gsub("^%l", string.upper))
-end
-if _G.Game then
-   local d= https://warnhub.github.io/.._G.Game
-   if tostring(game:HttpGet(d)) ~= "404: Not Found" then
-      a("Loading "..c(_G.Game).." Script!")
-      b(d)
-   end
+local g = game.PlaceId
+if g == 16732694052 then
+    a("Loading Fisch Script!")
+    b("https://raw.githubusercontent.com/WarnHub/warnhub.github.io/refs/heads/main/fisch")
 else
-   local g = game.PlaceId
-   if g == 16732694052 then
-       a("Loading Fisch Script!")
-       b("https://raw.githubusercontent.com/WarnHub/warnhub.github.io/refs/heads/main/fisch")
-   else
-       a("This Game isn't Supported!")   
-   end
+    a("This Game isn't Supported!")   
 end
