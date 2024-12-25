@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Primary Meta Tags -->
+    <title>Lua Editor - Made by Swift</title>
+    <meta name="title" content="Lua Editor - Online Lua Code Editor">
+    <meta name="description" content="Professional online Lua code editor with syntax highlighting and autocompletion.">
+    <meta name="keywords" content="lua, code editor, programming, development, online editor, lua editor">
+    <meta name="author" content="Swift">
+    <meta name="theme-color" content="#0a0b11">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/logos/lua-icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logos/lua-icon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/logos/lua-icon-180x180.png">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- External Resources -->
+    <script>
+        var require = {
+            paths: {
+                'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs',
+                'luaparse': 'https://unpkg.com/luaparse@0.3.1/luaparse'
+            },
+            'vs/nls': {
+                availableLanguages: {
+                    '*': ''
+                }
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/loader.min.js"></script>
+    <script src="https://unpkg.com/luaparse@0.3.1/luaparse.js"></script>
+    <script>
+        require.config({
+            'vs/nls': {
+                availableLanguages: {
+                    '*': ''
+                }
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/editor/editor.main.nls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/editor/editor.main.js"></script>
+
+    <!-- Add Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+
+    <!-- PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="Lua Editor">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="tab-container">
+            <button class="tab active" data-tab-id="tab-1">
+                main.lua
+                <span class="close-tab">x</span>
+            </button>
+            <button class="new-tab-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+        <div id="editor-wrapper">
+            <div id="editor-tab-1" class="editor-instance"></div>
+        </div>
+        <div id="iconContainer">
+            <i id="saveFileButton" class="fas fa-save icon"></i>
+            <i id="openFileButton" class="fas fa-folder-open icon"></i>
+            <i id="clearButton" class="fas fa-trash icon"></i>
+        </div>
+    </div>
+    <!-- Prism.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="./assets/js/editor-setup.js"></script>
+</body>
+
+</html>
