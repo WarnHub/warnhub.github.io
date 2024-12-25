@@ -1,14 +1,44 @@
-local n = loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMinisterq/Notification-Library/Main/Library.lua"))()
-local a = function(a)
-   n:SendNotification("Warn Hub",a,10)
-end
+local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+
 local b = function(a)
     loadstring(game:HttpGet(a))()
 end
 local g = game.PlaceId
+if _G.warnlode == true then
+    MessageBox.Show({
+        Position = UDim2.new(0.5,0,0.5,0), 
+        Text = "Warn Hub", 
+        Description = "Script aleadry loaded!", 
+        MessageBoxIcon = "Question", 
+        MessageBoxButtons = "OK", 
+        Result = function(res)
+            return
+        end
+    })
+    return
+end
+_G.warnlode = true
 if g == 16732694052 then
-    a("Loading Fisch Script!")
+    MessageBox.Show({
+        Position = UDim2.new(0.5,0,0.5,0), 
+        Text = "Warn Hub", 
+        Description = "Loading Fisch script", 
+        MessageBoxIcon = "Question", 
+        MessageBoxButtons = "OK", 
+        Result = function(res)
+            return
+        end
+    })
     b("https://raw.githubusercontent.com/WarnHub/warnhub.github.io/refs/heads/main/fisch")
 else
-    a("This Game isn't Supported!")   
+    MessageBox.Show({
+        Position = UDim2.new(0.5,0,0.5,0), 
+        Text = "Warn Hub", 
+        Description = "Theres no script for this game by Warn Hub", 
+        MessageBoxIcon = "Question", 
+        MessageBoxButtons = "OK", 
+        Result = function(res)
+            return
+        end
+    })
 end
